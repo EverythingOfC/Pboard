@@ -31,9 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'pybo.apps.PyboConfig',
+    'common.apps.CommonConfig', # 생성한 앱 등록
+    'pybo.apps.PyboConfig', # 생성한 앱 등록
     'django.contrib.admin',
-    'django.contrib.auth',
+    'django.contrib.auth', # 장고의 로그인, 로그아웃을 도와주는 앱
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -128,3 +129,8 @@ STATICFILES_DIRS = [ BASE_DIR / 'static', ]
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = '/' # 로그인 성공 후 이동하는 URL
+                         # http://localhost:8000/ 페이지
+
+LOGOUT_REDIRECT_URL = '/'# 로그아웃 후 이동하는 URL
