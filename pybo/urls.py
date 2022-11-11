@@ -16,6 +16,6 @@ urlpatterns = [ # url 매핑과정  **** ( 어떤 모듈의 뷰파일 함수인�
     path('answer/create/<int:question_id>/',answer_views.answer_create,name='answer_create'), # 답변 등록 url 매핑
     path('answer/modify/<int:answer_id>/',answer_views.answer_modify,name='answer_modify'), # 답변 수정 url매핑
     path('answer/delete/<int:answer_id>/',answer_views.answer_delete,name='answer_delete'), # 답변 삭제 url매핑
-    path('answer/vote/<int:answer_id>/',answer_views.answer_vote,name='answer_vote'),
+    path('answer/vote/<int:answer_id>/',answer_views.answer_vote,name='answer_vote'), # 답변 추천 url 매핑
 ]
 
